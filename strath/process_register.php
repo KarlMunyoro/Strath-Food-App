@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php if ($messageType === "success"): ?>
         setTimeout(function() {
             window.location.href = 'login.html';
-        }, 5000);
+        }, 10000);
         <?php endif; ?>
     </script>
 </body>

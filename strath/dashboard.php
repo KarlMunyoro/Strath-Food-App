@@ -29,7 +29,6 @@ $user_role = $_SESSION['user_role'];
         <nav>
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="view_users.php">View Users</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </nav>
