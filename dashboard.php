@@ -83,7 +83,7 @@ $user_role = $_SESSION['user_role'];
             <div class="feature">
                 <h3>Menu Management</h3>
                 <p>Update menu items and availability.</p>
-                <a href="#" class="cta-button">Manage Menu</a>
+                <a href="menumgmt.php" class="cta-button">Manage Menu</a>
             </div>
             <?php endif; ?>
         </div>
