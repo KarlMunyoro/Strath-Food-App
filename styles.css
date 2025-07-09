@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset and base styles */
 * {
   margin: 0;
@@ -284,3 +285,130 @@ tr:hover {
     padding: 10px 8px;
   }
 }
+=======
+/* Centered form container */
+.centered-form {
+  max-width: 800px;
+  margin: 4rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Title */
+.centered-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Form groups */
+.centered-form .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.centered-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs & selects */
+.centered-form select,
+.centered-form input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fdfdfd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Submit button */
+.centered-form .submit-btn {
+  background: #00796b;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.centered-form .submit-btn:hover {
+  background: #005f56;
+}
+
+/* Back button */
+.centered-form .back-button {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  background: #607d8b;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.centered-form .back-button:hover {
+  background: #455a64;
+}
+
+/* Message styles */
+.success, .error {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+/* Center & style the orders table container */
+/* orders-table styling */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.orders-table thead th {
+  background: #00796b;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+}
+.orders-table tbody td {
+  padding: 0.75rem 1rem;
+  background: #fdfdfd;
+  border-bottom: 1px solid #e0e0e0;
+}
+.orders-table tbody tr:nth-child(even) td {
+  background: #f5f5f5;
+}
+.orders-table tbody tr:hover td {
+  background: #e8f5e9;
+}
+/* status and button colors… */
+>>>>>>> 3aba2fb0a28d917d1689891444b4ba87943182fe
