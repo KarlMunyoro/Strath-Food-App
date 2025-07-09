@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirmed'])) {
             if (confirmOrder) {
                 const form = document.getElementById('orderForm');
 
-                // Add hidden confirmation field before submitting
+                
                 const hidden = document.createElement('input');
                 hidden.type = 'hidden';
                 hidden.name = 'confirmed';
