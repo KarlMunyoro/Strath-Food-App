@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 
+=======
+include "header.php";
+>>>>>>> 3aba2fb0a28d917d1689891444b4ba87943182fe
 // Database connection parameters
 $host = "localhost";
 $username = "root";

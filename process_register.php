@@ -1,4 +1,5 @@
 <?php
+include "header.php";
 // Include database connection
 require_once "connection.php";
 
