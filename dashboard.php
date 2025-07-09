@@ -49,7 +49,8 @@ $user_role = $_SESSION['user_role'];
             <div class="feature">
                 <h3>Place Order</h3>
                 <p>Browse our menu and place your food orders.</p>
-                <a href="#" class="cta-button">Order Now</a>
+                <a href="place_order.php" class="cta-button">Order Now</a>
+
             </div>
             
             <div class="feature">
