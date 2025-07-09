@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
-=======
 include "header.php";
->>>>>>> 3aba2fb0a28d917d1689891444b4ba87943182fe
 require_once "connection.php";
 
 // Fetch all users
