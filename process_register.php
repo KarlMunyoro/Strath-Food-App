@@ -27,11 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Valid email is required";
     }
     
-    // Check if email ends with @strathmore.edu
-    if (!preg_match('/@strathmore\.edu$/', $email)) {
-        $errors[] = "Email must be a Strathmore University email (@strathmore.edu)";
-    }
-    
     // Check password length
     if (empty($password) || strlen($password) < 8) {
         $errors[] = "Password must be at least 8 characters long";
