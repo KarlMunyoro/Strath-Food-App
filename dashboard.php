@@ -65,7 +65,7 @@ $user_role = $_SESSION['user_role'];
             <div class="feature">
                 <h3>Manage Users</h3>
                 <p>View and manage system users.</p>
-                <a href="view_user.php" class="cta-button">Manage Users</a>
+                <a href="manage_users.php" class="cta-button">Manage Users</a>
             </div>
             
             <div class="feature">

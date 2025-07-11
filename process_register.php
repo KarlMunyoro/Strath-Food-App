@@ -15,10 +15,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm-password'];
     $role = filter_input(INPUT_POST, 'role', FILTER_SANITIZE_STRING);
+
     
     // Initialize errors array
     $errors = [];
-    
+        // Admin email restriction
+    if ($role === "admin" && !str_ends_with(strtolower($email), "@strathmore.edu")) {
+        $errors[] = "Only Strathmore emails can register as Admin.";
+    }
+
+    if ($role === "kitchen" && !str_ends_with(strtolower($email), "@strathmore.edu")) {
+        $errors[] = "Only Strathmore emails can register as Staff.";
+    }
     // Validate inputs
     if (empty($fullname)) {
         $errors[] = "Full name is required";
@@ -26,11 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Valid email is required";
-    }
-    
-    // Check if email ends with @strathmore.edu
-    if (!preg_match('/@strathmore\.edu$/', $email)) {
-        $errors[] = "Email must be a Strathmore University email (@strathmore.edu)";
     }
     
     // Check password length

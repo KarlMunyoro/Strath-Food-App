@@ -3,7 +3,7 @@
 // Database connection parameters
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "12345678";
 $database = "strathmore_ordering";
 
 // Create connection directly to the intended database

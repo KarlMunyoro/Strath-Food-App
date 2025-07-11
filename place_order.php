@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirmed'])) {
     }
 }
 ?>
-
+<link rel="stylesheet" href="styles.css">
 <div class="container centered-form">
     <h2>🛒 Place an Order</h2>
 
@@ -86,6 +86,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirmed'])) {
 
     <p><a href="dashboard.php" class="back-button">← Back to Dashboard</a></p>
 </div>
+<footer class="main-footer">
+    <p>&copy; 2025 Strathmore University Cafeteria Ordering System. All rights reserved.</p>
+</footer>
 
 <script>
 function confirmPayment(event) {
@@ -120,5 +123,3 @@ function confirmPayment(event) {
     }
 }
 </script>
-
-<?php include "footer.php"; ?>

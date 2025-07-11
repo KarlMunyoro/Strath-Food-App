@@ -46,6 +46,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 ?>
 
+<link rel="stylesheet" href="styles.css">
 <div class="container centered-form">
   <h2><?= $title ?></h2>
 
@@ -107,4 +108,6 @@ $result = $stmt->get_result();
 
   <p><a href="dashboard.php" class="back-button">← Back to Dashboard</a></p>
 </div>
-
+<footer class="main-footer">
+    <p>&copy; 2025 Strathmore University Cafeteria Ordering System. All rights reserved.</p>
+</footer>
