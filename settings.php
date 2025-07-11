@@ -6,6 +6,7 @@ session_start();
 $settings = [
     'default_availability' => '1', // true
     'maintenance_mode' => '0',     // false
+    
     'support_email' => 'cafeteria@strathmore.edu'
 ];
 

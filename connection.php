@@ -3,12 +3,12 @@
 // Database connection parameters
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "12345678";
+
 $database = "strathmore_ordering";
-$port = 3307;
 
 // Create connection directly to the intended database
-$conn = new mysqli($host, $username, $password, $database, $port);
+$conn = new mysqli($host, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
