@@ -1,4 +1,5 @@
 <?php
+include "header.php";
 include 'connection.php';
 
 // Handle updates
@@ -57,4 +58,3 @@ $result = $conn->query("SELECT * FROM menu ORDER BY name ASC");
         <p>&copy; 2025 Strathmore University Cafeteria Ordering System. All rights reserved.</p>
     </footer>
 </html>
-

@@ -1,4 +1,5 @@
 <?php
+include "header.php";
 require_once "connection.php";
 
 // Fetch all users
