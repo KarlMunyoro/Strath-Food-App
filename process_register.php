@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("ssss", $fullname, $email, $hashedPassword, $role);
             
             if ($stmt->execute()) {
-                $message = "Registration successful! You can now <a href='login.html'>login</a>.";
+                $message = "Registration successful! You can now <a href='login.php'>login</a>.";
                 $messageType = "success";
             } else {
                 $message = "Registration failed: " . $stmt->error;

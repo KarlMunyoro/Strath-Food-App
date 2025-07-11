@@ -26,11 +26,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (isset($_POST['delete']) && isset($_POST['user_id'])) {
-        $user_id = intval($_POST['user_id']);
+    $user_id = intval($_POST['user_id']);
+
+    // Check if user has orders
+    $check = $conn->prepare("SELECT COUNT(*) FROM orders WHERE user_id = ?");
+    $check->bind_param("i", $user_id);
+    $check->execute();
+    $check->bind_result($order_count);
+    $check->fetch();
+    $check->close();
+
+    if ($order_count > 0) {
+        echo "<script>alert('Cannot delete user: this user has existing orders.');</script>";
+    } else {
         $stmt = $conn->prepare("DELETE FROM users WHERE id = ?");
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
     }
+}
+
 }
 
 // Filter and search functionality

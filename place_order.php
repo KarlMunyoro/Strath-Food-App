@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirmed'])) {
     $stmt->bind_param("i", $menu_id);
     $stmt->execute();
     $item = $stmt->get_result()->fetch_assoc();
+    
     $stmt->close();
 
     if ($item && $item['available']) {
