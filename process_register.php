@@ -98,9 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Strathmore University Cafeteria Ordering System</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="registration.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="registration.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
     </header>
