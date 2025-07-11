@@ -3,7 +3,7 @@ include "header.php";
 require_once "connection.php";
 
 // Fetch all users
-$sql = "SELECT id, fullname, email, role, status, registration_date FROM users ORDER BY registration_date DESC";
+$sql = "SELECT id, fullname, email, role, status, registration_date FROM users ORDER BY id ASC";
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>

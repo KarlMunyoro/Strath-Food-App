@@ -71,7 +71,7 @@ $user_role = $_SESSION['user_role'];
             <div class="feature">
                 <h3>System Settings</h3>
                 <p>Configure system settings and preferences.</p>
-                <a href="#" class="cta-button">Settings</a>
+                <a href="settings.php" class="cta-button">Settings</a>
             </div>
             <?php endif; ?>
             
