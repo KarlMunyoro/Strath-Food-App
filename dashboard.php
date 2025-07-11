@@ -63,13 +63,13 @@ $user_role = $_SESSION['user_role'];
             <div class="feature">
                 <h3>Manage Users</h3>
                 <p>View and manage system users.</p>
-                <a href="view_users.php" class="cta-button">Manage Users</a>
+                <a href="manage_users.php" class="cta-button">Manage Users</a>
             </div>
             
             <div class="feature">
                 <h3>System Settings</h3>
                 <p>Configure system settings and preferences.</p>
-                <a href="#" class="cta-button">Settings</a>
+                <a href="settings.php" class="cta-button">Settings</a>
             </div>
             <?php endif; ?>
             

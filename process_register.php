@@ -17,6 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Initialize errors array
     $errors = [];
+
+        // Admin email restriction
+    if ($role === "admin" && !str_ends_with(strtolower($email), "@strathmore.edu")) {
+        $errors[] = "Only Strathmore emails can register as Admin.";
+    }
     
     // Validate inputs
     if (empty($fullname)) {
@@ -25,6 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Valid email is required";
+    }
+    
+    // Check if email ends with @strathmore.edu
+    if (!preg_match('/@strathmore\.edu$/', $email)) {
+        $errors[] = "Email must be a Strathmore University email (@strathmore.edu)";
     }
     
     // Check password length
@@ -62,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("ssss", $fullname, $email, $hashedPassword, $role);
             
             if ($stmt->execute()) {
-                $message = "Registration successful! You can now <a href='login.html'>login</a>.";
+                $message = "Registration successful! You can now <a href='login.php'>login</a>.";
                 $messageType = "success";
             } else {
                 $message = "Registration failed: " . $stmt->error;
@@ -93,9 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Strathmore University Cafeteria Ordering System</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="registration.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="registration.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -111,8 +121,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endif; ?>
             
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="registration.html" class="cta-button">Back to Registration</a>
-                <a href="index.html" class="cta-button secondary">Go to Home</a>
+                <a href="registration.php" class="cta-button">Back to Registration</a>
+                <a href="index.php" class="cta-button secondary">Go to Home</a>
             </div>
         </div>
     </main>
@@ -125,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Auto redirect after successful registration
         <?php if ($messageType === "success"): ?>
         setTimeout(function() {
-            window.location.href = 'login.html';
+            window.location.href = 'login.php';
         }, 10000);
         <?php endif; ?>
     </script>
