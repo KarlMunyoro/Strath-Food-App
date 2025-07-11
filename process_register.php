@@ -1,4 +1,5 @@
 <?php
+include "header.php";
 // Include database connection
 require_once "connection.php";
 
@@ -98,9 +99,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Strathmore University Cafeteria Ordering System</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="registration.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="registration.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -116,8 +117,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endif; ?>
             
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="registration.html" class="cta-button">Back to Registration</a>
-                <a href="index.html" class="cta-button secondary">Go to Home</a>
+                <a href="registration.php" class="cta-button">Back to Registration</a>
+                <a href="index.php" class="cta-button secondary">Go to Home</a>
             </div>
         </div>
     </main>
@@ -130,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Auto redirect after successful registration
         <?php if ($messageType === "success"): ?>
         setTimeout(function() {
-            window.location.href = 'login.html';
+            window.location.href = 'login.php';
         }, 10000);
         <?php endif; ?>
     </script>
