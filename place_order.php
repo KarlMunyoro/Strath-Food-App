@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirmed'])) {
     $quantity  = intval($_POST['quantity']);
     $user_id   = $_SESSION['user_id'];
 
-    // Fetch item data
+    // Fetch item's data
     $stmt = $conn->prepare("SELECT name, price, available FROM menu WHERE id = ?");
     $stmt->bind_param("i", $menu_id);
     $stmt->execute();
