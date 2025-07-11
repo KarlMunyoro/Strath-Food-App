@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['disable']) && isset($_POST['user_id'])) {
         $user_id = intval($_POST['user_id']);
         $stmt = $conn->prepare("UPDATE users SET status = 'inactive' WHERE id = ?");
+        
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
     }
