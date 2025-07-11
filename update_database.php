@@ -1,4 +1,5 @@
 <?php
+include "header.php";
 require_once "connection.php";
 
 echo "<h2>Database Update Script</h2>";
